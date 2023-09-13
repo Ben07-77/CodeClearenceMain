@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read More / Read Less Example</title>
+</head>
+<body>
+  <p id="more2" style="display: none;">
+        This is some additional content that was hidden before.
+    </p>
+    <div id="readMore">
+        <a style="text-decoration: none;" class="read-more" onclick="readMore()" id="myBtn2">Read more</a>
+    </div>
+
+    <script>
+        function readMore() {
+            var moreText2 = document.getElementById("more2");
+            var readMore2 = document.getElementById("readMore");
+            moreText2.style.display = "inline";
+            readMore2.innerHTML = `<a style="text-decoration: none;" class="read-more" onclick="readLess()" id="myBtn2">Read less</a>`;
+        }
+        
+        function readLess() {
+            var moreText2 = document.getElementById("more2");
+            var readMore2 = document.getElementById("readMore");
+            moreText2.style.display = "none";
+            readMore2.innerHTML = `<a style="text-decoration: none;" class="read-more" onclick="readMore()" id="myBtn2">Read more</a>`;
+        }
+    </script>
+</body>
+</html>
